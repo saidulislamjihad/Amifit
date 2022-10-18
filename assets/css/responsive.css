@@ -1,0 +1,39 @@
+@media screen and (max-width: 991px){
+	.weight-info-form .label-wrapper label {
+	    font-size: 23px;
+	}
+
+	.weight-info-form label {
+	    font-size: 23px;
+	}
+}
+@media screen and (max-width: 767px){
+	.section-title {
+	    line-height: 40px;
+	}
+}
+@media screen and (max-width: 650px){
+	.habit-items-wrapper .circle-shape1 {
+	    display: none;
+	}
+}
+@media screen and (max-width: 420px){
+	.dumble1 {
+	    bottom: 20%;
+	}
+
+	.slider-item-outer .heading {
+	    font-size: 50px;
+	}
+	 
+	.food-gallary-btn-outer {
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+
+	.food-gallary-btn-outer .none-btn-inner {
+	    margin-right: 0;
+	    margin-bottom: 20px;
+	}
+}

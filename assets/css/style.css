@@ -1,0 +1,838 @@
+common css start*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button,
+a {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Noticia Text', serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
+p {
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #111;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+    font-size: 33px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+/*common css End*/
+
+/*Header css start*/
+.header-section {
+  background: #1E1E1E;
+}
+.navbar.header-nav-wrapper {
+  height: 80px;
+  padding: 0;
+}
+.header-section .navbar-brand {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-items-wrapper {
+    padding: 0% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background: #1E1E1E;
+    position: relative;
+}
+
+    /*fixed header*/
+.fixed-header .nav-items-wrapper {
+    position: fixed;
+    background: #1E1E1E;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    animation: smoothScroll 1s forwards;
+}
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*Header css End*/
+
+/*Goal section css Start*/
+.goals-section {
+    padding: 70px 0;
+}
+.goal-item-outer {
+    position: relative;
+    margin-bottom: 28px;
+    transition: all .3s ease;
+}
+
+.goal-item-outer .item-name {
+    position: absolute;
+    color: #fff;
+    z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+.goal-item-outer:hover .item-name {
+    transform: translate(-50%, -10px);
+}
+
+.goal-item-outer:after {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 100%;
+    border-radius: 5px;
+    z-index: -1;
+    background-color: #FAFAFA;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.goal-item-outer:hover::after {
+    height: 100%;
+    background-color: rgb(0 0 0 / 25%);
+    z-index: 99;
+}
+/*Goal section css End*/
+
+/*Progress bar section css Start*/
+.progress-bar-section {
+    position: relative;
+}
+.progress {
+    height: 4px;
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    background-color: #FFA300;
+}
+.mouse {
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    width: 2rem;
+    height: 3.5rem;
+    border-radius: 1.1rem;
+    border: 4px solid white;
+    position: relative;
+    text-align: center;
+    left: 50%;
+}
+
+.mouse:hover {
+    filter: opacity(0.75);
+}
+
+.slider {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 100%);
+    position: absolute;
+    left: 38%;
+    animation: slider 2s ease-in-out infinite;
+}
+
+@keyframes slider {
+    0% {
+        filter: opacity(1);
+        height: 0.5rem;
+        top: 0.5rem;
+    }
+    25% {
+        filter: opacity(0.8);
+        height: 1rem;
+        top: 0.5rem;
+    }
+    70% {
+        filter: opacity(0.8);
+        height: 1rem;
+        top: 2rem;
+    }
+    85% {
+        filter: opacity(0);
+        height: 1rem;
+        top: 2rem;
+    }
+    90% {
+        filter: opacity(0);
+        height: 0.5rem;
+        top: 0.5rem;
+    }
+    100% {
+        filter: opacity(1);
+        height: 0.5rem;
+        top: 0.5rem;
+    }
+}
+/*Progress bar section css End*/
+
+/*Gender section css Start*/
+.gender-slider-section {
+    padding: 70px 0;
+}
+
+.slider-item-outer {
+    position: relative;
+}
+
+.dumble1 {
+    position: absolute;
+    bottom: 15%;
+    left: 24%;
+}
+
+.dumble2 {
+    position: absolute;
+    bottom: 25%;
+    left: 75%;
+}
+
+.shapes1 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #FFA300;
+    border-radius: 50%;
+    top: 15%;
+    left: 19%;
+    z-index: 99;
+}
+
+.shapes2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #F2441D;
+    border-radius: 50%;
+    top: 50%;
+    left: 22%;
+    z-index: 99;
+}
+
+.shapes3 {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    background: #fff;
+    border-radius: 50%;
+    top: 15%;
+    left: 90%;
+    z-index: 99;
+}
+
+.shapes4 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: #FFA300;
+    border-radius: 50%;
+    top: 35%;
+    left: 65%;
+    z-index: 99;
+}
+
+.slider-item-outer .heading {
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    color: #F2F2F2;
+    text-transform: uppercase;
+}
+.slider-items-wrapper i.fas.fa-chevron-right,
+.body-shape-slider-wrapper i.fas.fa-chevron-right,
+.feet-type-slider-wrapper i.fas.fa-chevron-right{
+    position: absolute;
+    right: 5px;
+    top: 35%;
+    transform: translateY(-50%);
+    border: 1px solid #666;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #FFA300;
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 99;
+}
+
+.slider-items-wrapper i.fas.fa-chevron-left,
+.body-shape-slider-wrapper i.fas.fa-chevron-left,
+.feet-type-slider-wrapper i.fas.fa-chevron-left{
+    position: absolute;
+    left: 5px;
+    top: 35%;
+    transform: translateY(-50%);
+    border: 1px solid #666;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #FFA300;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.slider-items-wrapper i.fas.fa-chevron-right:hover,
+.slider-items-wrapper i.fas.fa-chevron-left:hover,
+.body-shape-slider-wrapper i.fas.fa-chevron-left:hover,
+.body-shape-slider-wrapper i.fas.fa-chevron-right:hover,
+.feet-type-slider-wrapper i.fas.fa-chevron-right:hover,
+.feet-type-slider-wrapper i.fas.fa-chevron-left:hover {
+    background: #FFA300;
+    color: #fff;
+    border: 1px solid #FFA300;
+}
+/*Gender section css End*/
+
+/*Weight info section css start*/
+.weight-info-section {
+    padding: 70px 0;
+}
+
+.weight-info-form .label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.weight-info-form .label-wrapper label {
+    font-size: 33px;
+    font-weight: 600;
+    color: #F2F2F2;
+    line-height: 24px;
+}
+
+.weight-info-form .label-wrapper .label-wrapper-inner {
+    display: flex;
+    align-items: center;
+}
+
+.weight-info-form .label-wrapper .label-wrapper-inner span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #F2F2F2;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.weight-info-form .label-wrapper .label-wrapper-inner input[type="checkbox"] {
+    width: 36px;
+    height: 36px;
+    background: #111;
+    border: 2px solid #666;
+}
+.weight-info-form input.form-control {
+    margin-bottom: 40px;
+    height: 60px;
+    border: 1px solid #666666;
+    background: transparent;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.weight-info-form label {
+    font-size: 33px;
+    font-weight: 600;
+    color: #F2F2F2;
+    line-height: 24px;
+}
+
+.weight-info-form #blood_group {
+    margin-bottom: 40px;
+    height: 60px;
+    border: 1px solid #666666;
+    background: transparent;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.weight-info-form #blood_group option {
+    background: #111;
+    color: #fff;
+}
+
+/*Weight info section css End*/
+
+/*DOB section css start*/
+.dob-section {
+    padding: 70px 0;
+}
+
+.dob-form #month,
+.dob-form #day,
+.dob-form #year,
+.dob-form input.form-control {
+    margin-bottom: 40px;
+    height: 60px;
+    border: 1px solid #666666;
+    background: transparent;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.dob-form #month option,
+.dob-form #day option,
+.dob-form #year option{
+    background: #111;
+    color: #fff;
+}
+/*DOB section css end*/
+
+/*Neck and waist size section css start*/
+.neck-size-section,
+.waist-size-section,
+.arm-size-section {
+    padding: 70px 0;
+}
+
+.neck-label-inner,
+.waist-label-inner,
+.arm-label-inner {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.neck-label-inner span,
+.waist-label-inner span,
+.arm-label-inner span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #F2F2F2;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.neck-label-inner input[type="checkbox"],
+.waist-label-inner input[type="checkbox"],
+.arm-label-inner input[type="checkbox"] {
+    width: 36px;
+    height: 36px;
+    background: #111;
+    border: 2px solid #666;
+}
+
+.neck-size-form input.form-control,
+.waist-size-form input.form-control,
+.arm-size-form input.form-control {
+    margin-bottom: 40px;
+    height: 60px;
+    border: 1px solid #666666;
+    background: transparent;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.size-btn-outer {
+    text-align: center;
+}
+
+.size-btn-inner {
+    color: #FFFFFF;
+    padding: 16px 60px;
+    background: #333333;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.size-btn-inner:hover {
+    box-shadow: 0px 15px 35px rgb(255 49 88 / 30%);
+    background: #f2441d;
+    transform: translateY(-5px);
+}
+
+.container.shape-p .circle-shape1 {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    border-radius: 50%;
+    top: 15%;
+    left: 25%;
+}
+
+.container.shape-p {position: relative;}
+
+.container.shape-p .circle-shape2 {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: #FFA300;
+    border-radius: 50%;
+    top: 40%;
+    left: 10%;
+}
+
+.container.shape-p .circle-shape3 {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: #fff;
+    border-radius: 50%;
+    top: 10%;
+    right: 10%;
+}
+
+.container.shape-p .circle-shape4 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #F2441D;
+    border-radius: 50%;
+    top: 60%;
+    right: 0;
+}
+
+.arm-section-text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFA300;
+    margin: 20px 0;
+}
+
+/*Neck and waist size section css End*/
+
+/*Body shape section css start*/
+.body-shape-section,
+.feet-type-section {
+    padding: 70px 0;
+}
+
+.slider-item.slick-current img {
+    width: 100%;
+    object-fit: contain;
+    transition: all .3s ease;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.slider-item {
+    padding: 40px 0;
+}
+
+.slider-item img {
+    height: 340px;
+    width: 100%;
+    object-fit: contain;
+    transition: all .3s ease;
+    transform: scale(1);
+    opacity: 0.7;
+}
+/*Body shape section css end*/
+
+/*Diet food section css start*/
+.diet-food-section {
+    padding: 70px 0 100px;
+}
+
+.diet-food-items-wrapper {
+    position: relative;
+}
+
+.diet-food-items-wrapper .circle-shape1 {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    border-radius: 50%;
+    left: 15%;
+    top: 20%;
+}
+
+.diet-food-items-wrapper .circle-shape2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #F2441D;
+    border-radius: 50%;
+    right: 22%;
+    top: -15px;
+    z-index: -1;
+}
+
+.diet-food-items-wrapper .circle-shape3 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: #F2441D;
+    border-radius: 50%;
+    bottom: -58px;
+    left: 18%;
+    z-index: -2;
+}
+
+.diet-food-items-wrapper.circle-shape4 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #FFA300;
+    border-radius: 50%;
+    right: 10%;
+    bottom: 10%;
+}
+
+.diet-food-item-outer {
+    position: relative;
+    margin-top: 30px;
+}
+
+.diet-food-item-outer .heading {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+}
+/*Diet food section css End*/
+
+/*Habit section css start*/
+.habits-section {
+    padding: 70px 0 100px;
+}
+
+.habit-items-wrapper {
+    position: relative;
+    margin-top: 40px;
+}
+
+.habit-items-wrapper .circle-shape1 {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    background: #F2441D;
+    border-radius: 50%;
+    right: -70px;
+    top: -60px;
+    z-index: -1;
+}
+
+.habit-items-wrapper .circle-shape2 {
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    background: #FFA300;
+    border-radius: 50%;
+    left: -44px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.habit-item-outer {
+    position: relative;
+}
+
+.habit-item-outer .heading {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+/*Habit section css End*/
+
+/*Medical section css start*/
+.medical-section {
+    padding: 70px 0;
+}
+.medical-condition-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #F2F2F2;
+    font-size: 23px;
+    font-weight: 700;
+}
+.selecotr-item {
+    background: #333333;
+    margin-bottom: 20px;
+}
+.selector-item_radio{
+    appearance:none;
+    display:none;
+}
+.selector-item_label{
+    width: 100%;
+    text-align: center;
+    line-height: 400%;
+    transition-duration: .5s;
+    transition-property: transform, color, box-shadow;
+    transform: none;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.selector-item_label:hover {
+    background: #f2441d;
+}
+
+.selector-item_radio:checked + .selector-item_label{
+    background-color:#f16522;
+    color:#fff;
+    box-shadow:0 0 4px rgba(0,0,0,.5),0 2px 4px rgba(0,0,0,.5);
+    transform:translateY(-2px);
+}
+.medical-content img {
+    height: 500px;
+    object-fit: contain;
+}
+.medical-content {
+    margin-bottom: 80px;
+}
+
+.medical-content {
+    margin-bottom: 80px;
+}
+
+/*Medical section css End*/
+
+/*Food gallary section css start*/
+.food-gallary-btn-outer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.none-btn-inner {
+    display: inline-block;
+    background: #333333;
+    padding: 13px 60px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.other-btn-inner {
+    border: 1px solid #666666;
+    padding: 13px 28px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.none-btn-inner:hover {
+    background: #f2441d;
+    color: #fff;
+}
+
+.other-btn-inner:hover {
+    background: #f2441d;
+    color: #fff;
+    border: 1px solid #f2441d;
+}
+/*Food gallary section css End*/
+
+/*Work out section css start*/
+.workout-section {
+    padding: 70px 0;
+}
+
+.workout-sec-left-form input {
+    margin-bottom: 20px;
+    height: 60px;
+    border: 1px solid #666666;
+    background: transparent;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.workout-sec-left .section-title {
+    text-align: start;
+    line-height: 45px;
+}
+
+.btn-outer {
+    text-align: end;
+}
+
+.workout-btn-inner {
+    background: #333;
+    padding: 16px 40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.workout-btn-inner:hover {
+    background: #f2441d;
+}
+/*Work out section css End*/
+
+/*Footer section css start*/
+.footer-section {
+    padding: 30px 0;
+}
+
+.footer-section .text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/*Footer section css End*/
